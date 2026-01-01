@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WoW Gold Mastery: Play Free for Life - The Complete Gold Caps Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #f0f8ff;
+            background: linear-gradient(135deg, #001F3F 0%, #8A2BE2 50%, #FFD700 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        h1, h2, h3 { font-family: 'Exo 2', sans-serif; font-weight: 900; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }
+        .btn-gold {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #001F3F !important;
+            padding: 18px 40px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(255,215,0,0.5);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn-gold:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(255,215,0,0.7); }
+        .badge-gold {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #001F3F;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(255,215,0,0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .section { padding: 80px 0; }
+        .hero { 
+            background: linear-gradient(rgba(0,31,63,0.9), rgba(138,43,226,0.9)), url('data:image/svg+xml;base64,...'); /* WoW-style bg placeholder */
+            background-size: cover;
+            text-align: center;
+            padding: 150px 0;
+            position: relative;
+        }
+        .hero h1 { 
+            font-size: clamp(3rem, 8vw, 6rem); 
+            color: #FFD700; 
+            margin-bottom: 20px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow { 0% { text-shadow: 0 0 20px #FFD700; } 100% { text-shadow: 0 0 40px #FFD700, 0 0 60px #FFD700; } }
+        .hero p { font-size: 1.6rem; margin-bottom: 40px; }
+        .ebook-mockup {
+            max-width: 400px;
+            margin: 40px auto;
+            height: 550px;
+            background: linear-gradient(145deg, #2c1810, #1a0f07);
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+            padding: 40px 30px;
+        }
+        .ebook-mockup::before {
+            content: 'WoW Gold Mastery';
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.8rem;
+            color: #FFD700;
+            font-weight: 900;
+            text-shadow: 2px 2px 4px #000;
+        }
+        .ebook-mockup::after {
+            content: 'Play Free for Life';
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2rem;
+            color: #f0f8ff;
+        }
+        .pain-points { background: rgba(0,31,63,0.8); text-align: center; }
+        .pain-points ul { list-style: none; max-width: 800px; margin: 0 auto; }
+        .pain-points li { font-size: 1.3rem; margin: 20px 0; padding-left: 50px; position: relative; }
+        .pain-points li::before { content: '⚠️'; position: absolute; left: 0; font-size: 2rem; }
+        .solution { text-align: center; }
+        .solution h2 { color: #FFD700; font-size: 3.5rem; margin-bottom: 30px; }
+        .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 60px; }
+        .benefit-card {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,215,0,0.3);
+            transition: transform 0.3s;
+        }
+        .benefit-card:hover { transform: scale(1.05); }
+        .about { background: rgba(138,43,226,0.2); text-align: center; }
+        .toc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
+        .toc-item {
+            background: rgba(0,31,63,0.6);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border-left: 5px solid #FFD700;
+            transition: all 0.3s;
+        }
+        .toc-item:hover { background: rgba(0,31,63,0.8); transform: translateY(-10px); }
+        .toc-item h4 { color: #FFD700; margin-bottom: 15px; }
+        .progress-container { 
+            max-width: 800px; 
+            margin: 60px auto; 
+            background: rgba(0,0,0,0.5); 
+            border-radius: 50px; 
+            padding: 5px; 
+        }
+        .progress-bar {
+            height: 60px;
+            background: linear-gradient(90deg, #ff4444 0%, #ffaa00 33%, #FFD700 66%, #00ff88 100%);
+            border-radius: 45px;
+            position: relative;
+            overflow: hidden;
+        }
+        .progress-label {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: 700;
+            color: #001F3F;
+            font-size: 1.1rem;
+            z-index: 2;
+        }
+        .progress-label:nth-child(1) { left: 10px; }
+        .progress-label:nth-child(2) { left: 50%; transform: translate(-50%, -50%); }
+        .progress-label:nth-child(3) { right: 10px; }
+        .testimonials { background: rgba(0,31,63,0.8); text-align: center; }
+        .testimonial { 
+            max-width: 500px; 
+            margin: 0 auto 40px; 
+            font-style: italic; 
+            font-size: 1.2rem; 
+        }
+        .testimonial cite { display: block; margin-top: 20px; font-weight: 700; color: #FFD700; }
+        .faq { }
+        .faq-item { 
+            max-width: 800px; 
+            margin: 0 auto 30px; 
+            background: rgba(255,255,255,0.1); 
+            padding: 30px; 
+            border-radius: 15px; 
+            border-left: 5px solid #8A2BE2; 
+        }
+        .faq-item h4 { color: #FFD700; margin-bottom: 15px; }
+        .cta-section { 
+            text-align: center; 
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); 
+            color: #001F3F; 
+            padding: 100px 0; 
+        }
+        .cta-section h2 { font-size: 4rem; margin-bottom: 30px; }
+        @media (max-width: 768px) {
+            .hero { padding: 100px 0; }
+            .hero h1 { font-size: 3rem; }
+            .section { padding: 50px 0; }
+            .benefits-grid, .toc-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <h1>Play WoW Free for Life</h1>
+            <p><span class="badge-gold">Multiple Gold Caps Proven Methods</span></p>
+            <p class="hero-p">Master the Ultimate Step-by-Step System to Earn Endless Gold – Never Pay for WoW Again!</p>
+            <div class="_ebook-mockup">
+                            <img src="./woww.png" alt="" width="600">
+
+            </div>
+            <a href="#buy" class="btn-gold">Download Now & Start Your Free WoW Journey Today</a>
+        </div>
+    </section>
+
+    <section class="section pain-points">
+        <div class="container">
+            <h2 style="color: #FFD700; font-size: 3rem; margin-bottom: 50px;">Tired of These Gold Farming Nightmares?</h2>
+            <ul>
+                <li>Hours wasted on inefficient farms that barely cover your mount...</li>
+                <li>Struggling to afford epic gear, repairs, and those endless subscription fees</li>
+                <li>Watching others flex gold caps while you're scraping by</li>
+                <li>Falling behind in every expansion because your gold game sucks</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section solution">
+        <div class="container">
+            <h2>Introducing WoW Gold Mastery:</h2>
+            <p style="font-size: 1.4rem; max-width: 800px; margin: 0 auto 50px;">The Complete Gold Caps Guide – Your <strong>Beginner to Gold Cap Journey</strong> with Proven, Time-Saving Techniques</p>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <span class="progress-label">Subscription Free</span>
+                    <span class="progress-label">Daily Gold Flow</span>
+                    <span class="progress-label">Gold Cap Achieved</span>
+                </div>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>🚀 Step-by-Step System</h3>
+                    <p>Follow expert strategies that generate multiple gold caps – no guesswork.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>⏰ Time-Saving Farms</h3>
+                    <p>Solo & group methods for max gold/hour – reclaim your playtime.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>💰 Auction House Domination</h3>
+                    <p>Flip transmog & crafts like a pro for passive income.</p>
+                </div>
+            </div>
+            <a href="#buy" class="btn-gold" style="margin-top: 50px;">Instant Access After Purchase</a>
+        </div>
+    </section>
+
+    <section class="section about">
+        <div class="container">
+            <h2 style="color: #FFD700;">A Little About Me</h2>
+            <p style="max-width: 700px; margin: 30px auto; font-size: 1.2rem;">I've hit <strong>15+ Gold Caps</strong> across multiple expansions, sold thousands in in-game services, and played WoW 100% free for 8 years straight. This 212-page guide packs every tactic I use – refined over years of testing. Now, it's your turn to Never Pay for WoW Again.</p>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px;">
+                <span class="badge-gold">15+ Gold Caps</span>
+                <span class="badge-gold">8 Years Free Play</span>
+                <span class="badge-gold">Proven in TWW</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="text-align: center; color: #FFD700; margin-bottom: 20px;">What's Inside Your 212-Page Guide</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">Every strategy, setup, and secret revealed...</p>
+            <div class="toc-grid">
+                <div class="toc-item">
+                    <h4>Professions Mastery</h4>
+                    <p>Skinning, Herbalism, Mining – max profits fast.</p>
+                </div>
+                <div class="toc-item">
+                    <h4>Solo & Group Farming</h4>
+                    <p>Best spots for War Within & Midnight.</p>
+                </div>
+                <div class="toc-item">
+                    <h4>Transmog Selling</h4>
+                    <p>Fundamentals to flood your bags with gold.</p>
+                </div>
+                <div class="toc-item">
+                    <h4>Auction House Domination</h4>
+                    <p>Sniping, posting, and scaling strategies.</p>
+                </div>
+                <div class="toc-item">
+                    <h4>Crafted Materials & Items</h4>
+                    <p>High-demand crafts for endless caps.</p>
+                </div>
+                <div class="toc-item">
+                    <h4>Essential Addons & Setup</h4>
+                    <p>Plug-and-play tools for pros.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="text-align: center;">
+        <div class="container">
+            <h2 style="color: #FFD700; font-size: 3rem;">Lifetime Free Updates</h2>
+            <p style="font-size: 1.5rem; margin-bottom: 30px;"><span class="badge-gold" style="font-size: 1.2rem; padding: 15px 30px;">Free Updates for ALL Future Expansions</span></p>
+            <p>Your guide stays cutting-edge – new methods added automatically!</p>
+        </div>
+    </section>
+
+    <section class="section testimonials">
+        <div class="container">
+            <h2 style="color: #FFD700; margin-bottom: 60px;">What Real Players Are Saying</h2>
+            <div class="testimonial">
+                "Hit my first gold cap in 2 weeks! Game-changer for TWW farms."
+                <cite>- Sarah K., Casual Player</cite>
+            </div>
+            <div class="testimonial">
+                "Multiple Gold Caps Proven Methods – now playing free forever. Worth every copper!"
+                <cite>- Mike R., Veteran Raider</cite>
+            </div>
+            <div class="testimonial">
+                "Beginner-friendly and detailed. Auction House section alone paid for it 10x."
+                <cite>- Ahmed L., New Returner</cite>
+            </div>
+        </div>
+    </section>
+
+    <section class="section faq">
+        <div class="container">
+            <h2 style="text-align: center; color: #FFD700; margin-bottom: 50px;">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h4>Is this beginner-friendly?</h4>
+                <p>Absolutely! Full <strong>Beginner to Gold Cap Journey</strong> – no prior knowledge needed.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How do I get free updates?</h4>
+                <p>Reply to your purchase receipt email – I'll send the latest version instantly.</p>
+            </div>
+            <div class="faq-item">
+                <h4>What's your refund policy?</h4>
+                <p><strong>Non-Refundable Digital Product</strong> – Instant Access After Purchase. Tested and guaranteed to work!</p>
+            </div>
+            <div class="faq-item">
+                <h4>Works with current expansions?</h4>
+                <p>Yes! Covers War Within, Midnight, and all future with <strong>Free Updates for ALL Future Expansions</strong>.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How soon can I start earning?</h4>
+                <p>Download, setup addons, and farm your first 10k gold today!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" id="buy">
+        <div class="container">
+            <h2>Ready to Play WoW Free for Life?</h2>
+            <p style="font-size: 1.6rem; margin-bottom: 40px;">Join thousands crushing gold caps with this proven system.</p>
+            <a href="https://rebrand.ly/b35773" class="btn-gold" style="font-size: 1.6rem; padding: 25px 60px;">Download Now & Never Pay for WoW Again</a>
+            <p style="margin-top: 30px; font-size: 1.1rem;">Secure Instant Download • 212 Pages • Lifetime Updates</p>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
